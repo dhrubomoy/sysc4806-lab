@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>BuddyInfo</title>
+    <meta http-equiv="Content-Type" content="application/json" />
+</head>
+<body>
+<h1>AddressBook</h1>
+<div th:if="${addressBook != null}">
+    <div th:each="buddyInfo : ${addressBook.getBuddyInfos()}">
+        <p th:text="'ID: ' + ${buddyInfo.id}" />
+        <p th:text="'Name: ' + ${buddyInfo.name}" />
+        <p th:text="'Phone number: ' + ${buddyInfo.phoneNumber}" />
+    </div>
+</div>
+
+</body>
+</html>

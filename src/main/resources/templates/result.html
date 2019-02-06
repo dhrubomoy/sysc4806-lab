@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>BuddyInfo</title>
+    <meta http-equiv="Content-Type" content="application/json" />
+</head>
+<body>
+<h1>Result</h1>
+<div th:if="${buddyInfo != null}">
+    <p th:text="'ID: ' + ${buddyInfo.id}" />
+    <p th:text="'Name: ' + ${buddyInfo.name}" />
+    <p th:text="'Phone number: ' + ${buddyInfo.phoneNumber}" />
+    <a href="/buddyInfo">Add Another Buddy</a>
+</div>
+
+</body>
+</html>
