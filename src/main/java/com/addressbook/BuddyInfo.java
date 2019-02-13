@@ -15,13 +15,13 @@ public class BuddyInfo {
     private String name;
     private String phoneNumber;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "addressbook_id", nullable = false)
-    @OnDelete(action = OnDeleteAction.CASCADE)
-    @JsonIdentityInfo(generator=ObjectIdGenerators.PropertyGenerator.class, property="id")
-    @JsonIdentityReference(alwaysAsId=true)
-    @JsonProperty("addressbook_id")
-    private AddressBook addressBook;
+//    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+//    @JoinColumn(name = "addressbook_id", nullable = false)
+//    @OnDelete(action = OnDeleteAction.CASCADE)
+//    @JsonIdentityInfo(generator=ObjectIdGenerators.PropertyGenerator.class, property="id")
+//    @JsonIdentityReference(alwaysAsId=true)
+//    @JsonProperty("addressbook_id")
+//    private AddressBook addressBook;
 
     public BuddyInfo(String name, String phoneNumber) {
         this.name = name;
@@ -32,13 +32,13 @@ public class BuddyInfo {
         this("", "");
     }
 
-    public AddressBook getAddressBook() {
-        return addressBook;
-    }
-
-    public void setAddressBook(AddressBook addressBook) {
-        this.addressBook = addressBook;
-    }
+//    public AddressBook getAddressBook() {
+//        return addressBook;
+//    }
+//
+//    public void setAddressBook(AddressBook addressBook) {
+//        this.addressBook = addressBook;
+//    }
 
     public Integer getId() {
         return id;

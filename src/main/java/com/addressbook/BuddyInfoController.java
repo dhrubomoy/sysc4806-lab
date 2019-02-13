@@ -27,7 +27,8 @@ public class BuddyInfoController {
             @PathVariable (value = "addressBookId") Integer addressBookId,
             @Valid @RequestBody BuddyInfo buddyInfo) {
         return addressBookRepository.findById(addressBookId).map(addressBook -> {
-           buddyInfo.setAddressBook(addressBook);
+//           buddyInfo.setAddressBook(addressBook);
+            addressBook.addBuddyInfo(buddyInfo);
            return buddyInfoRepository.save(buddyInfo);
         }).orElseThrow(() -> new RuntimeException("AddressBookId " + addressBookId + " not found"));
 

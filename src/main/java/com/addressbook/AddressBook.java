@@ -10,7 +10,8 @@ public class AddressBook {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @OneToMany(mappedBy = "addressBook", cascade = CascadeType.ALL)
+
+    @OneToMany(cascade = CascadeType.ALL)
     private List<BuddyInfo> buddyInfoList;
 
     public AddressBook(List<BuddyInfo> buddyInfoList) {
@@ -31,5 +32,9 @@ public class AddressBook {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public void addBuddyInfo(BuddyInfo buddyInfo) {
+        this.buddyInfoList.add(buddyInfo);
     }
 }
